@@ -10,8 +10,23 @@ import UIKit
 
 class BookTableViewCell: UITableViewCell {
 
-    @IBAction func changeReadStatus(_ sender: Any) {
+    func updateViews() {
+        guard let thisBook = book else { return }
+        bookTitleLabel.text = thisBook.title
+        
+        if thisBook.hasBeenRead == true {
+            readButton.setImage(#imageLiteral(resourceName: "checked"), for: .normal)
+        } else {
+            readButton.setImage(#imageLiteral(resourceName: "unchecked"), for: .normal)
+        }
     }
+    
+    @IBAction func changeReadStatus(_ sender: Any) {
+        delegate?.toggleHasBeenRead(forCell: self)
+    }
+    
+    weak var delegate: BookTableViewCellDelegate?
+    var book: Book?
     
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var readButton: UIButton!

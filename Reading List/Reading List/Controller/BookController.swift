@@ -82,14 +82,15 @@ class BookController {
     }
     
     
-    func update(book: Book, title: String, reasonToRead: String? = nil) {
+    func update(book: Book, title: String, reasonToRead: String) {
         
         guard let index = books.index(of: book) else { return }
         
         books[index].title = title
         
-        guard let newReason = reasonToRead else { return }
-        books[index].reasonToRead = newReason
+        if reasonToRead != books[index].reasonToRead {
+            books[index].reasonToRead = reasonToRead
+        }
         
         saveToPersistentStore()
     }

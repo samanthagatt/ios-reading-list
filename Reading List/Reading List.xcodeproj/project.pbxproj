@@ -16,6 +16,7 @@
 		D64FE7C12110F95000BEB5CF /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FE7C02110F95000BEB5CF /* BookTableViewCell.swift */; };
 		D64FE7C42110FA0800BEB5CF /* ReadingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FE7C32110FA0800BEB5CF /* ReadingListTableViewController.swift */; };
 		D64FE7C62110FD5000BEB5CF /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FE7C52110FD5000BEB5CF /* BookDetailViewController.swift */; };
+		D64FE7C8211100CC00BEB5CF /* BookTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64FE7C7211100CC00BEB5CF /* BookTableViewCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D64FE7C02110F95000BEB5CF /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		D64FE7C32110FA0800BEB5CF /* ReadingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListTableViewController.swift; sourceTree = "<group>"; };
 		D64FE7C52110FD5000BEB5CF /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		D64FE7C7211100CC00BEB5CF /* BookTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				D64FE7BC2110EA5A00BEB5CF /* Model */,
 				D64FE7BF2110EB6600BEB5CF /* Controller */,
+				D64FE7C9211100D200BEB5CF /* Protocol */,
 				D64FE7C22110F95400BEB5CF /* VCs */,
 				4669416C2110E22B00E7FF73 /* Main.storyboard */,
 				4669416F2110E22B00E7FF73 /* Assets.xcassets */,
@@ -98,6 +101,14 @@
 				D64FE7C52110FD5000BEB5CF /* BookDetailViewController.swift */,
 			);
 			path = VCs;
+			sourceTree = "<group>";
+		};
+		D64FE7C9211100D200BEB5CF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D64FE7C7211100CC00BEB5CF /* BookTableViewCellDelegate.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 				D64FE7C62110FD5000BEB5CF /* BookDetailViewController.swift in Sources */,
 				466941692110E22A00E7FF73 /* AppDelegate.swift in Sources */,
 				D64FE7BE2110EB6200BEB5CF /* BookController.swift in Sources */,
+				D64FE7C8211100CC00BEB5CF /* BookTableViewCellDelegate.swift in Sources */,
 				D64FE7BB2110EA5400BEB5CF /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
