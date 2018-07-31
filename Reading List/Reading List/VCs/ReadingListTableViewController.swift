@@ -10,10 +10,10 @@ import UIKit
 
 class ReadingListTableViewController: UITableViewController, BookTableViewCellDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
+        tableView.reloadData()
     }
     
     // MARK: - Functions
@@ -83,7 +83,14 @@ class ReadingListTableViewController: UITableViewController, BookTableViewCellDe
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationVC = segue.destination as? BookDetailViewController else { return }
+        destinationVC.bookController = bookController
         
+        if segue.identifier == "ShowBookDetails" {
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let book = bookFor(indexPath: indexPath)
+            destinationVC.book = book
+        }
     }
     
     

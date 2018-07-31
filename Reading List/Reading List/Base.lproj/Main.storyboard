@@ -45,7 +45,7 @@
                                                     </constraints>
                                                     <state key="normal" image="unchecked"/>
                                                     <connections>
-                                                        <action selector="changeReadStatusImage:" destination="nzz-4o-Q2U" eventType="touchUpInside" id="1S3-xp-WfW"/>
+                                                        <action selector="changeReadStatus:" destination="nzz-4o-Q2U" eventType="touchUpInside" id="uEe-ag-1IN"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -59,7 +59,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bookTitleLable" destination="EzQ-Ac-LAE" id="TBQ-Sv-Xph"/>
+                                    <outlet property="bookTitleLabel" destination="EzQ-Ac-LAE" id="X47-es-UF0"/>
                                     <outlet property="readButton" destination="eAE-4F-VNT" id="gn2-J6-zfF"/>
                                     <segue destination="kAg-K0-6lw" kind="show" identifier="ShowBookDetails" id="4aH-Mq-Hvu"/>
                                 </connections>

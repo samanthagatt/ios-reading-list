@@ -39,6 +39,8 @@ class BookDetailViewController: UIViewController {
         } else {
             bookController?.create(title: title, reasonToRead: reasonToRead)
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     
     var bookController: BookController?

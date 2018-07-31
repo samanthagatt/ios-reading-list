@@ -9,7 +9,7 @@
 import UIKit
 
 class BookTableViewCell: UITableViewCell {
-
+    
     func updateViews() {
         guard let thisBook = book else { return }
         bookTitleLabel.text = thisBook.title
@@ -26,7 +26,11 @@ class BookTableViewCell: UITableViewCell {
     }
     
     weak var delegate: BookTableViewCellDelegate?
-    var book: Book?
+    var book: Book? {
+        didSet {
+            updateViews()
+        }
+    }
     
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var readButton: UIButton!

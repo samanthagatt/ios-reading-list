@@ -10,6 +10,10 @@ import Foundation
 
 class BookController {
     
+    init() {
+        loadFromPersistentStore()
+    }
+    
     var books: [Book] = []
     
     var readingListURL: URL? {
